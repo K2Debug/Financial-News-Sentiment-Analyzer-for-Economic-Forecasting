@@ -17,6 +17,8 @@ Production classification uses **Groq** (`llama-3.1-8b-instant`) with an 11-cate
 
    Or run `notebooks/00_setup.ipynb` for guided installs.
 
+   **Google Colab:** [Open `00_setup.ipynb` in Colab](https://colab.research.google.com/github/K2Debug/Financial-News-Sentiment-Analyzer-for-Economic-Forecasting/blob/main/notebooks/00_setup.ipynb) first — it clones the repo to `/content/EF-02` and installs dependencies. Then open and run `01_scraper` through `06_visualisation` in order (each notebook has a path-pointer cell at the top).
+
 3. Copy the environment template and add your Groq API key:
 
    ```bash
@@ -59,4 +61,6 @@ See `docs/00_pipeline_overview.ipynb` for a full pipeline map.
 
 ## Model benchmarking
 
-Open [`notebooks/03_benchmarking.ipynb`](notebooks/03_benchmarking.ipynb) to compare six sentiment models on the labelled test set. On Google Colab, use [Open in Colab](https://colab.research.google.com/github/K2Debug/Financial-News-Sentiment-Analyzer-for-Economic-Forecasting/blob/main/notebooks/03_benchmarking.ipynb).
+Optional step between cleaning and classification: [`notebooks/03_benchmarking.ipynb`](notebooks/03_benchmarking.ipynb) compares six sentiment models (TextBlob, VADER, FinBERT, GPT-4o-mini, Llama 3.1 8b, Llama 3.3 70b) on the labelled test set.
+
+On Colab, run [`00_setup.ipynb`](notebooks/00_setup.ipynb) first, then open `03_benchmarking.ipynb` from the cloned `/content/EF-02/notebooks/` folder alongside the rest of the pipeline.
